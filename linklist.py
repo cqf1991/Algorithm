@@ -38,13 +38,11 @@ class linklist:
 
 
     def getAll(self):
-        for i in range(0,self.size):
-
-            print 'data:',self.first.next.next.data
-            print self.size
-
+         iterNode=self.first
+         for x in range(0,self.size):
+             print 'data:',iterNode.data
+             iterNode=iterNode.next
     
-
 la=linklist()
 la.insert('abc')
 la.insert('123')
