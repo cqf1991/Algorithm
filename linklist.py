@@ -47,6 +47,6 @@ la=linklist()
 la.insert('abc')
 la.insert('123')
 la.insert('777777')
-
+la.insert('12345')
 la.getAll()
 
