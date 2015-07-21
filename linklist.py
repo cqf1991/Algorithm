@@ -48,5 +48,6 @@ la.insert('abc')
 la.insert('123')
 la.insert('777777')
 la.insert('12345')
+# sort algorithms rdy
 la.getAll()
 
