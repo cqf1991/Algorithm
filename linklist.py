@@ -40,14 +40,45 @@ class linklist:
     def getAll(self):
          iterNode=self.first
          for x in range(0,self.size):
-             print 'data:',iterNode.data
-             iterNode=iterNode.next
+             if(iterNode!=None):
+                 print 'data:',iterNode.data
+                 iterNode=iterNode.next
     
+
+    def reverseByIter(self):
+        first=self.first
+        reverse=None
+        while(first!=None):
+            second=first.next
+            first.next=reverse
+            reverse=first
+            first=second
+        
+        self.first=reverse
+
+
+    def reverseByRecur(self,first):
+        if first.next==None:
+            return first
+        if first==None:
+            return None
+        second=first.next
+        rest=self.reverseByRecur(second)
+        second.next=first
+        first.next=None
+        return rest
+
 la=linklist()
 la.insert('abc')
 la.insert('123')
 la.insert('777777')
 la.insert('12345')
-# sort algorithms rdy
+print '1st get all'
 la.getAll()
-
+# sort algorithms rdy
+la.reverseByIter()
+print '2nd get all (reverseByIter)'
+la.getAll()
+la.first=la.reverseByRecur(la.first)
+print '3rd get all (reverseByRecur)'
+la.getAll()
