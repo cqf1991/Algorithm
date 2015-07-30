@@ -1,4 +1,4 @@
-class insertionSort:
+class selectionSort:
     def sort(self,list):
         for i in range(len(list)):   
             min = i     
@@ -9,5 +9,5 @@ class insertionSort:
         return list
        
 alist = [4,2,3,5]
-IS = insertionSort()
+IS = selectionSort()
 print IS.sort(alist)
